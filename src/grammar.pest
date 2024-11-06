@@ -1,0 +1,5 @@
+columns = { column ~ ("," ~ column)* }
+column = { ident | aggregate_fn }
+ident = { (ASCII_ALPHA | "_") ~ (ASCII_ALPHANUMERIC | "_")* }
+aggregate_fn = { aggregate_fn_ident ~ "(" ~ "DISTINCT"? ~ ident ~ ")" }
+aggregate_fn_ident = { "COUNT" | "SUM" | "AVG" | "MIN" | "MAX" }
