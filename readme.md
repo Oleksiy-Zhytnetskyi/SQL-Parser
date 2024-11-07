@@ -17,4 +17,4 @@ The parser uses the `pest` crate to process SQL `SELECT` queries. It follows the
 
 1. Tokenization: The input query is split into tokens based on SQL syntax rules (keywords, identifiers, operators, etc.).
 2. Parsing: These tokens are matched against grammar rules to structure the query correctly.
-3. Query Representation: The parsed query is transformed into a structured format for further processing, like execution or optimization.
+3. Query Representation: The parsed query is transformed into a structured format (an AST - Abstract Syntax Tree) for further processing, like execution or optimization.
